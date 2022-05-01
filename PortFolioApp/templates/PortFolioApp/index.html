@@ -1,0 +1,68 @@
+{% extends 'PortFolioApp/base.html' %}
+
+
+{% block content%}
+    {% for index in index_models %}
+        <div class="main-content">
+            <div class="main-text">
+                <h2>{{ index.title }}</h2>
+                <p>{{ index.subtitle }}</p>
+            </div>
+        </div>
+    
+        <div class="about-content">
+            <div class="about-container">
+                <div class="about-text">
+                    <br><br><br>
+                    <h3>About Me</h3>
+                    <br><br><br>
+                    <p>{{ index.introduction }}</p>
+                </div>
+                <div class="about-image">
+                    <img src="{{ index.top_img.url}}" alt="">
+                </div>
+            </div> 
+        </div>
+    {% endfor %}
+    <br><br><br>
+    <div class="skill-content">
+        <div class="skill-text">
+            <div class="skill-title">
+                <h3>Skills</h3>
+            </div>
+            <br><br>
+            <div class="skill-p">
+                <p>HTML</p>
+                <br>
+                <p>CSS</p>
+                <br>
+                <p>JavaScript</p>
+                <br>
+                <p>Python</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="contact-container">
+        <div class="contact-content">
+            <center>
+                 <div class="contact-title">
+                    <h3>Contact Me</h3>
+                </div>
+                <!--<div class="contact-form">
+                    <input type="text" name="" id="" class="inputText" placeholder="Name">
+                    <input type="text" name="" id="address" class="inputText" placeholder="Address">
+                    <input type="file" accept="image/*" class="inputText">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Body"></textarea>
+                </div>
+                <input type="submit" class="btn" id="snd-btn"> -->
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ forms.as_p }}
+                    <input type="submit" class="btn" id="snd-btn">
+                </form>
+
+            </center>
+        </div>
+    </div>
+{% endblock%}

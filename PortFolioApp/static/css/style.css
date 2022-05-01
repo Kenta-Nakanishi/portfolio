@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Libre+Bodoni:ital@1&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Libre Bodoni', serif;
+}
+
+header {
+    width: 100%;
+    height: 70px;
+}
+
+.site-title h1 {
+    color: #fff;
+    margin-left: 20px;
+    width: 250px;
+    padding: 15px;
+    text-align: center;
+}
+
+.main-content {
+    width: 100vw;
+    height: 80vh;
+    margin: auto;
+    background-image: url('/static/img/image1.jpg');
+    background-position: center;
+    background-size: cover;
+}
+ 
+.main-text {
+    position: relative;
+    top: 30%;
+    left: 28%;
+    width: 300px;
+    animation: color-change 5s linear infinite;
+}
+
+@keyframes color-change {
+    0%, 10%, 100%{
+        color: #000;
+    }
+    
+    50% {
+        color: #fff;
+    }   
+}
+
+.main-text h2{
+    font-size: 2.3rem;
+}
+
+.main-text p{
+    font-size: 20px;
+}
+
+.about-content {
+    width: 100vw;
+    height: 60vh;
+    color: #fff;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+    padding: 50px;
+}
+
+.about-text h3 {
+    font-size: 2.3rem;
+}
+
+.about-text {
+    width: 300px;
+    height: 400px;
+}
+
+.about-text p{
+    font-size: 18px;
+}
+
+.about-image {
+    width: 300px;
+    height: 400px;
+}
+
+.about-image img{
+    width: 300px;
+    height: 400px;
+}
+
+.skill-content {
+    width: 100vw;
+    height: 70vh;
+    background-image: url('/static/img/image2.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.skill-content::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+.skill-title, .skill-p {
+    width: 100px;
+}
+
+.skill-title h3 {
+    font-size: 2.3rem;
+}
+
+.skill-p {
+    font-size: 18px;
+}
+
+.skill-p :hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.skill-text {
+    position: absolute;
+    top: 20%;
+    left: 65%;
+    /* transform: translate(-50%, -50%); */
+    z-index: 3;
+}
+
+.contact-container {
+    /* background-color: aliceblue; */
+    width: 100vw;
+    height: 90vh;
+    color: #fff;
+}
+
+.contact-content {
+    width: 80%;
+    height: 700px;
+    margin: auto;
+    /* background-color: aliceblue; */
+}
+
+.contact-title {
+    margin-top: 20px;
+    font-size: 2.3rem;
+    margin-bottom: 50px;
+}
+
+form  input{
+    display: block;
+    height: 40px;
+}
+
+form  input, form textarea {
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+form textarea {
+    height: 300px;
+}
+
+.btn {
+    width: 40%;
+    height: 50px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgb(220, 210, 210);
+}
+
+footer {
+    /* background-color: aliceblue; */
+    width: 100vw;   
+}
+
+.footer-container {
+    border-top: 1px solid #fff;
+    width: 80%;
+    height: 80px;
+    margin: auto;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cp-right, .sns-icon {
+    padding: 20px;
+}
+
+.cp-right {
+    color: #fff;
+}
+
+.sns-icon {
+    display: flex;
+}
+
+.sns {
+    margin-right: 10px;
+}
+
+.fa-line {
+    color: #00B900;
+}
+
+.fa-instagram  {
+    color: rgb(207, 46, 146);
+}
+
+.fa-twitter {
+    color: #00acee;
+}
+
+::placeholder {
+    color: #000;
+}
